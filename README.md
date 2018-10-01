@@ -1,3 +1,29 @@
+## audibot (melodic) - 0.1.0-1
+
+The packages in the `audibot` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --rosdistro melodic --track melodic audibot --edit` on `Mon, 01 Oct 2018 01:12:20 -0000`
+
+These packages were released:
+- `audibot`
+- `audibot_description`
+- `audibot_gazebo`
+
+Version of package(s) in repository `audibot`:
+
+- upstream repository: https://github.com/robustify/audibot.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `0.1.0-0`
+- new version: `0.1.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.6.7`
+- catkin_pkg version: `0.4.8`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.9`
+- vcstools version: `0.1.40`
+
+
 ## audibot (melodic) - 0.1.0-0
 
 The packages in the `audibot` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --rosdistro melodic --track melodic audibot --edit` on `Mon, 01 Oct 2018 01:08:38 -0000`
