@@ -4,7 +4,7 @@ project(audibot_gazebo)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   gazebo_ros
-  tf
+  tf2_ros
 )
 
 set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
@@ -42,6 +42,12 @@ install(
   DIRECTORY
     launch
     rviz
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)
+
+install(
+  PROGRAMS
+    scripts/tf_prefixer.py
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
