@@ -1,0 +1,12 @@
+Source: ros-kinetic-audibot
+Section: misc
+Priority: optional
+Maintainer: Micho Radovnikovich <mradov@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-audibot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-audibot-description, ros-kinetic-audibot-gazebo
+Description: Metapackage for audibot
