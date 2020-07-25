@@ -1,0 +1,12 @@
+Source: ros-noetic-audibot-description
+Section: misc
+Priority: optional
+Maintainer: Micho Radovnikovich <mtradovn@oakland.edu>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-audibot-description
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-urdf, ros-noetic-xacro
+Description: Meshes and URDF descriptions for audibot
