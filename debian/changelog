@@ -1,0 +1,15 @@
+ros-melodic-audibot-description (0.1.1-1stretch) stretch; urgency=high
+
+  * Removes logo texture from the hood
+  * Contributors: Micho Radovnikovich
+
+ -- Micho Radovnikovich <mtradovn@oakland.edu>  Sat, 25 Jul 2020 04:00:00 -0000
+
+ros-melodic-audibot-description (0.1.0-1stretch) stretch; urgency=high
+
+  * First release
+  * Contributors: Micho Radovnikovich
+
+ -- Micho Radovnikovich <mtradovn@oakland.edu>  Sun, 30 Sep 2018 04:00:00 -0000
+
+
