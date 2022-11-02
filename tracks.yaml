@@ -67,7 +67,7 @@ tracks:
     name: upstream
     patches: null
     release_inc: '2'
-    release_repo_url: git@github.com:robustify/audibot-release.git
+    release_repo_url: null
     release_tag: :{version}
     ros_distro: noetic
     vcs_type: git
