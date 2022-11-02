@@ -1,0 +1,12 @@
+Source: ros-melodic-audibot-gazebo
+Section: misc
+Priority: optional
+Maintainer: Micho Radovnikovich <mtradovn@oakland.edu>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-gazebo-ros, ros-melodic-nav-msgs, ros-melodic-roscpp, ros-melodic-rospy <!nocheck>, ros-melodic-rostest <!nocheck>, ros-melodic-tf2-geometry-msgs, ros-melodic-tf2-ros
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-audibot-gazebo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-audibot-description, ros-melodic-gazebo-ros, ros-melodic-gazebo-ros-pkgs, ros-melodic-nav-msgs, ros-melodic-robot-state-publisher, ros-melodic-roscpp, ros-melodic-rviz, ros-melodic-tf2-geometry-msgs, ros-melodic-tf2-ros
+Description: Gazebo model plugin to simulate Audibot
