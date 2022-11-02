@@ -2,6 +2,9 @@
 Changelog for package audibot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.2.2 (2022-11-01)
+------------------
+
 0.2.1 (2020-07-29)
 ------------------
 * Bump minimum CMake version to 3.0.2 as recommended for ROS Noetic
