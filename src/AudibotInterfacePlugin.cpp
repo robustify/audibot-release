@@ -20,7 +20,6 @@ void AudibotInterfacePlugin::Load(physics::ModelPtr model, sdf::ElementPtr sdf) 
   wheel_fl_joint_ = model->GetJoint("wheel_fl_joint");
   wheel_fr_joint_ = model->GetJoint("wheel_fr_joint");
   footprint_link_ = model->GetLink("base_footprint");
-
   // Load SDF parameters
   if (sdf->HasElement("pubTf")) {
     sdf->GetElement("pubTf")->GetValue()->Get(pub_tf_);
@@ -60,6 +59,8 @@ void AudibotInterfacePlugin::Load(physics::ModelPtr model, sdf::ElementPtr sdf) 
 
   pub_twist_ = n_->advertise<geometry_msgs::TwistStamped> ("twist", 1);
   pub_gear_state_ = n_->advertise<std_msgs::UInt8> ("gear_state", 1);
+  pub_odom_ = n_->advertise<nav_msgs::Odometry>("odom", 1);
+  pub_steering_ = n_->advertise<std_msgs::Float64>("steering_state", 1);
   feedback_timer_ = n_->createTimer(ros::Duration(0.02), &AudibotInterfacePlugin::feedbackTimerCallback, this);
 
   if (pub_tf_) {
@@ -250,6 +251,23 @@ void AudibotInterfacePlugin::feedbackTimerCallback(const ros::TimerEvent& event)
   std_msgs::UInt8 gear_state_msg;
   gear_state_msg.data = gear_cmd_;
   pub_gear_state_.publish(gear_state_msg);
+
+  nav_msgs::Odometry odom_msg;
+  odom_msg.header.frame_id = frame_id_;
+  odom_msg.header.stamp = event.current_real;
+  odom_msg.twist.twist = twist_;
+  odom_msg.pose.pose.position.x = world_pose_.Pos().X();
+  odom_msg.pose.pose.position.y = world_pose_.Pos().Y();
+  odom_msg.pose.pose.position.z = world_pose_.Pos().Z();
+  odom_msg.pose.pose.orientation.x = world_pose_.Rot().X();
+  odom_msg.pose.pose.orientation.y = world_pose_.Rot().Y();
+  odom_msg.pose.pose.orientation.z = world_pose_.Rot().Z();
+  odom_msg.pose.pose.orientation.w = world_pose_.Rot().W();
+  pub_odom_.publish(odom_msg);
+
+  std_msgs::Float64 steering;
+  steering.data = AUDIBOT_STEERING_RATIO * current_steering_angle_;
+  pub_steering_.publish(steering);
 }
 
 void AudibotInterfacePlugin::tfTimerCallback(const ros::TimerEvent& event) {

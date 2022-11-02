@@ -5,6 +5,7 @@
 #include <std_msgs/Float64.h>
 #include <std_msgs/UInt8.h>
 #include <geometry_msgs/TwistStamped.h>
+#include <nav_msgs/Odometry.h>
 
 #include <gazebo/common/Plugin.hh>
 #include <gazebo/physics/physics.hh>
@@ -58,7 +59,9 @@ private:
 
   ros::NodeHandle* n_;
   ros::Publisher pub_twist_;
+  ros::Publisher pub_odom_;
   ros::Publisher pub_gear_state_;
+  ros::Publisher pub_steering_;
   ros::Subscriber sub_steering_cmd_;
   ros::Subscriber sub_throttle_cmd_;
   ros::Subscriber sub_brake_cmd_;
