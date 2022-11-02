@@ -5,11 +5,12 @@
 #include <std_msgs/Float64.h>
 #include <std_msgs/UInt8.h>
 #include <geometry_msgs/TwistStamped.h>
+#include <nav_msgs/Odometry.h>
 
 #include <gazebo/common/Plugin.hh>
 #include <gazebo/physics/physics.hh>
-#include <tf/tf.h>
-#include <tf/transform_broadcaster.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+#include <tf2_ros/transform_broadcaster.h>
 
 namespace gazebo {
 
@@ -58,7 +59,9 @@ private:
 
   ros::NodeHandle* n_;
   ros::Publisher pub_twist_;
+  ros::Publisher pub_odom_;
   ros::Publisher pub_gear_state_;
+  ros::Publisher pub_steering_;
   ros::Subscriber sub_steering_cmd_;
   ros::Subscriber sub_throttle_cmd_;
   ros::Subscriber sub_brake_cmd_;
@@ -67,7 +70,7 @@ private:
   ros::Timer feedback_timer_;
   ros::Timer tf_timer_;
 
-  tf::TransformBroadcaster br_;
+  tf2_ros::TransformBroadcaster br_;
   geometry_msgs::Twist twist_;
   bool rollover_;
 #if GAZEBO_MAJOR_VERSION >= 9
@@ -84,6 +87,7 @@ private:
   physics::JointPtr wheel_fr_joint_;
   physics::LinkPtr footprint_link_;
   common::Time last_update_time_;
+  std::string frame_id_;
 
   // SDF parameters
   std::string robot_name_;
