@@ -1,0 +1,12 @@
+Source: ros-noetic-audibot
+Section: misc
+Priority: optional
+Maintainer: Micho Radovnikovich <mradov@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-noetic-audibot
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-audibot-description, ros-noetic-audibot-gazebo
+Description: Metapackage for audibot
