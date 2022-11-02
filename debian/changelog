@@ -1,0 +1,33 @@
+ros-noetic-audibot (0.2.2-5buster) buster; urgency=high
+
+
+
+ -- Micho Radovnikovich <mradov@gmail.com>  Tue, 01 Nov 2022 04:00:00 -0000
+
+ros-noetic-audibot (0.2.1-5buster) buster; urgency=high
+
+  * Bump minimum CMake version to 3.0.2 as recommended for ROS Noetic
+  * Contributors: Micho Radovnikovich
+
+ -- Micho Radovnikovich <mradov@gmail.com>  Wed, 29 Jul 2020 04:00:00 -0000
+
+ros-noetic-audibot (0.2.0-5buster) buster; urgency=high
+
+
+
+ -- Micho Radovnikovich <mradov@gmail.com>  Sat, 25 Jul 2020 04:00:00 -0000
+
+ros-noetic-audibot (0.1.1-5buster) buster; urgency=high
+
+
+
+ -- Micho Radovnikovich <mradov@gmail.com>  Sat, 25 Jul 2020 04:00:00 -0000
+
+ros-noetic-audibot (0.1.0-5buster) buster; urgency=high
+
+  * First release
+  * Contributors: Micho Radovnikovich
+
+ -- Micho Radovnikovich <mradov@gmail.com>  Sun, 30 Sep 2018 04:00:00 -0000
+
+
