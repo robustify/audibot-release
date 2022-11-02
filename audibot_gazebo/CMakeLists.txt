@@ -6,6 +6,7 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
   tf2_ros
   tf2_geometry_msgs
+  nav_msgs
 )
 
 set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
@@ -46,12 +47,6 @@ install(
   DIRECTORY
     launch
     rviz
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
-
-install(
-  PROGRAMS
-    scripts/tf_prefixer.py
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 
