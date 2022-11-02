@@ -1,3 +1,29 @@
+## audibot (noetic) - 0.2.2-4
+
+The packages in the `audibot` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --rosdistro noetic --edit-track audibot` on `Wed, 02 Nov 2022 00:41:53 -0000`
+
+These packages were released:
+- `audibot`
+- `audibot_description`
+- `audibot_gazebo`
+
+Version of package(s) in repository `audibot`:
+
+- upstream repository: https://github.com/robustify/audibot.git
+- release repository: https://github.com/robustify/audibot-release.git
+- rosdistro version: `0.2.1-1`
+- old version: `0.2.2-3`
+- new version: `0.2.2-4`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.1`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## audibot (noetic) - 0.2.2-3
 
 The packages in the `audibot` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --rosdistro noetic --edit-track audibot` on `Wed, 02 Nov 2022 00:32:15 -0000`
